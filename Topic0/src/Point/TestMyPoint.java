@@ -1,3 +1,4 @@
+package Point;
 
 public class TestMyPoint {
 	

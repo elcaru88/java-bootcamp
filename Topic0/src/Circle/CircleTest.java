@@ -1,3 +1,4 @@
+package Circle;
 
 public class CircleTest {      
    public static void main(String[] args) {
@@ -13,6 +14,8 @@ public class CircleTest {
       //(e.g., System.out.println(c1.radius)); or assign a new value to radius (e.g., c1.radius=5.0)? 
       //Try it out and explain the error messages. 
       // El Error esta en que las variables son privadas.
+      
+      
       
       Circle c3 = new Circle();   // construct an instance of Circle
       c3.setRadius(5.0);          // change radius
