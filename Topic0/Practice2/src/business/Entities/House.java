@@ -2,10 +2,10 @@ package business.Entities;
 
 public class House extends Building {
 	
-	Room room;
-	Kitchen kitchen;
-	boolean garage;
-	boolean pool;
+	private Room room;
+	private Kitchen kitchen;
+	private boolean garage;
+	private boolean pool;
 	
 	public House( String adress , int floors , double mts2 , Room room, Kitchen kitchen , boolean garage , boolean pool){
 		super(adress, floors, mts2);
@@ -14,6 +14,7 @@ public class House extends Building {
 		this.garage = garage;
 		this.pool = pool;
 	}
+	
 
 	public Room getRoom() {
 		return room;

@@ -2,9 +2,9 @@ package business.Entities;
 
 public class Building {
 	
-	String adress;
-	int numberFloors;
-	double mts2;
+	private String adress;
+	private int numberFloors;
+	private double mts2;
 	
 	public Building( String adress, int floors , double mts2){
 		this.adress = adress;
