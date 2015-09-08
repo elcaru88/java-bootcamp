@@ -51,7 +51,7 @@ exercises**
 
     * [Topic 7: ORM](#topic-7-orm-1-day)
   
-    * [Extra topic: Spring Data & MongoDB](#topic-8-spring-data--mongodb-2-day)
+    * [Extra topic: Spring Data & MongoDB](#extra-topic-spring-data--mongodb-2-day)
 
 10. [Your First Project Starts Now!](#your-first-project-starts-now)
 
