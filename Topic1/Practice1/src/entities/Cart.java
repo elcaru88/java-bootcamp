@@ -15,7 +15,7 @@ public class Cart {
 	public void addToCart(Item item)
     { 
 		items.add(item);
-		totalPrice += item.getProduct().getProductPrice();
+		totalPrice += item.getProduct().getProductPrice() * item.quantity;
     }
 	
 	public String toString(){
