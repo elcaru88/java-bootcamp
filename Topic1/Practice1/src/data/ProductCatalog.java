@@ -31,6 +31,11 @@ public class ProductCatalog {
 		lastId += 1;
 	}
 	
+	public static int getLastId() {
+		return lastId;
+	}
+
+
 	public Product getProduct(int id){
 		for (Product p : productos) {
 			

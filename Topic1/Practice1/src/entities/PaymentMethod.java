@@ -1,7 +1,7 @@
 package entities;
 
-public abstract class PaymentMethod {
+public class PaymentMethod {
 	
-	public abstract int getDiscount();
-
 }
+
+
