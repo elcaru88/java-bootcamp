@@ -27,5 +27,12 @@ public class PayPal extends PaymentMethod{
 	}
 
 
+	@Override
+	public double calculateDiscount(Cart cart) {
+		double discount = cart.getCheapestItem().product.getProductPrice() * cart.getCheapestItem().quantity;
+		return discount;
+	}
+
+
 
 }

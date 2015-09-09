@@ -1,6 +1,10 @@
 package entities;
 
-public class PaymentMethod {
+public abstract class PaymentMethod {
+	
+	public abstract double calculateDiscount(Cart cart);
+	
+	
 	
 }
 

@@ -26,4 +26,10 @@ public class CreditCard  extends PaymentMethod{
 		this.creditCardNumber = creditCardNumber;
 	}
 
+	@Override
+	public double calculateDiscount(Cart cart) {
+		double discount = cart.totalPrice*0.1;
+		return discount;
+	}
+
 }

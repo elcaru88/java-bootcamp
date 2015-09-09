@@ -30,5 +30,9 @@ public class Sale {
 	public void setSaleNumber(int saleNumber) {
 		this.saleNumber = saleNumber;
 	}
+	
+	public String toString(){
+		return "Sale NUMBER :"+this.saleNumber+ "\n"+ this.cart.toString() ;
+	}
 
 }
