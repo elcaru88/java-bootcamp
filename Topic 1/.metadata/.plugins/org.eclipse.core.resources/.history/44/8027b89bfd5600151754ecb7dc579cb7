@@ -1,0 +1,36 @@
+package exercise1;
+
+import java.util.Scanner;
+
+public class ShoppingCartApp {
+	public static void main(String[] args) {
+	Scanner scanner = new Scanner(System.in);
+	
+	ShoppingCart shoppingCart = new ShoppingCart();
+	
+	Product cd = new Product("Music cd", 20.5);
+	Product lamp = new Product("lamp",50);
+	Product pc = new Product("personal computer", 2500.00);
+	
+	String input;
+	
+	
+	System.out.println("Welcome");
+	do{
+	System.out.println("Choose one of the following products or imput done");
+	System.out.println("cd, lamp,pc ");	
+	input = scanner.nextLine();
+	cd.toString()
+	shoppingCart.add(intput);
+	 
+	}while(input.equalsIgnoreCase("done"));
+		
+	System.out.println(shoppingCart.toString());
+		
+		
+		
+		
+		
+	}
+	
+}

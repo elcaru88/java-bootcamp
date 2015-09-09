@@ -1,0 +1,50 @@
+package exercise1;
+
+import java.util.Scanner;
+
+public class ShoppingCartApp {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+
+		ShoppingCart shoppingCart = new ShoppingCart();
+
+		Product Music_cd = new Product("Music cd", 20.5);
+		Product lamp = new Product("lamp", 50);
+		Product pc = new Product("pc", 2500.00);
+
+		String input;
+		boolean state = true;
+
+		System.out.println("Welcome");
+		
+
+		while (state) {
+			System.out
+					.println("Choose one of the following products or imput done");
+			System.out.println("cd, lamp,pc ");
+			input = scanner.nextLine();
+
+			switch (input) {
+			case "Music cd":
+				shoppingCart.add(Music_cd);
+
+			case "lamp":
+				shoppingCart.add(lamp);
+
+			case "pc":
+				shoppingCart.add(pc);
+
+			case "done":
+				break;
+				
+			default:
+				System.out.println("product not found");
+
+			}
+
+		}
+
+		System.out.println(shoppingCart.toString());
+
+	}
+}

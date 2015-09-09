@@ -1,0 +1,15 @@
+package exercise1;
+
+public class DiscountFactory {
+	
+	public Discount getDiscount(String method){
+		if ( method.equalsIgnoreCase("Credit Card")){
+			return new CreditCard(method, 0);
+		}
+		if ( method.equalsIgnoreCase("Paypal")){
+				return new Paypal(method, method);
+	
+		}else return new Cash();
+	}
+
+}

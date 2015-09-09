@@ -1,0 +1,26 @@
+package exercise1;
+
+import java.util.ArrayList;
+
+public class ShoppingCart {
+	
+private ArrayList<Product> products;
+	
+	public ShoppingCart(){
+		products = new ArrayList<Product>();
+	}
+
+	public void add(Product product){
+		products.add(product);
+		
+	}
+	
+	public double getPrice(){
+		double price = 0.0;
+		for (Product product : products) {
+			price = price + product.getPrice();
+		}
+		return price;
+	}
+
+}

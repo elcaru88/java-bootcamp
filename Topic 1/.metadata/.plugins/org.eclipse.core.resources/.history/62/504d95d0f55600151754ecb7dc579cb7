@@ -1,0 +1,24 @@
+package exercise1;
+
+public class CreditCard extends Discount{
+
+	private String name;
+	private int creditNumber;
+	
+	
+	
+	public CreditCard(String name, int creditNumber) {
+		
+		this.name = name;
+		this.creditNumber = creditNumber;
+	}
+
+
+
+	public double priceWithDiscount(double price) {
+		//10% by Credit Card
+		
+		return price - ((10 * price)/100);
+	}
+
+}

@@ -1,0 +1,18 @@
+package exercise1;
+
+import java.util.ArrayList;
+
+public class ShoppingCart {
+	
+private ArrayList<Product> products;
+	
+	public ShoppingCart(){
+		products = new ArrayList<Product>();
+	}
+
+	public void add(Product product){
+		products.add(product);
+		
+	}
+
+}

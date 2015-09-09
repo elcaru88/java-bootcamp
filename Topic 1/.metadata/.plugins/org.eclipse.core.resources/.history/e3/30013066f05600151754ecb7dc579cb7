@@ -1,0 +1,14 @@
+package exercise1;
+
+public abstract class Price {
+	
+	
+	
+	public abstract double priceWithDiscount ();
+	
+	
+	
+	
+	
+	
+}

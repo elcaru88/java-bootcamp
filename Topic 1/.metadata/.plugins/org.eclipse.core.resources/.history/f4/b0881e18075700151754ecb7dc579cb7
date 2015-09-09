@@ -1,0 +1,12 @@
+package exercise1;
+
+public class Cash extends Discount{
+
+	
+	
+	public double priceWithDiscount(double price,double extraInfo) {
+		
+		return price - (extraInfo - ((90 * extraInfo)/100));
+	}
+
+}
