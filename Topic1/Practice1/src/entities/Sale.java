@@ -32,7 +32,8 @@ public class Sale {
 	}
 	
 	public String toString(){
-		return "Sale NUMBER :"+this.saleNumber+ "\n"+ this.cart.toString() ;
+		return "------------------------------------------------------------------------\n"
+				+ "Bill NUMBER :"+this.saleNumber+ "\n \n"+ this.cart.toString() ;
 	}
 
 }

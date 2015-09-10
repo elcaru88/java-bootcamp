@@ -1,7 +1,6 @@
 package entities;
 import java.util.ArrayList;
 
-
 public class Cart {
 	
 	ArrayList<Item> items;
@@ -13,17 +12,34 @@ public class Cart {
 	}
 	
 	public void addToCart(Item item)
-    { 
-		items.add(item);
-		totalPrice += item.getProduct().getProductPrice() * item.quantity;
+    {   
+		Item itemOriginal = this.isOnCart(item.getProduct());
+		if ( itemOriginal   != null) {
+			itemOriginal.setQuantity( itemOriginal.getQuantity() + item.getQuantity());
+			itemOriginal.setSubTotal(itemOriginal.getQuantity() * itemOriginal.getProduct().getProductPrice());
+			totalPrice += item.getSubTotal();
+		}
+		else {
+			items.add(item);
+			totalPrice += item.getSubTotal();
+		}
     }
 	
-	public String toString(){
-		String text = "";
+	public Item isOnCart(Product product) {
 		for (Item item : items) {
-			text = text + "Producto:  "+ item.product.getProuctName()+" Cantidad: "+ item.getQuantity()+" Precio "+ item.product.getProductPrice()+"\n";
+			if (item.getProduct().equals(product)) {
+				return item;
+			}
 		}
-		text +=(" SubTotal : "+ totalPrice);
+		return null;
+	}
+
+	public String toString(){
+		String text = "PRODUCTS SELECTED: \n";
+		for (Item item : items) {
+			text = text + item.toString()+" \n\n";
+		}
+		text +=("------------------------------------------------------------- \n TOTALPRICE : "+ totalPrice);
 		return text;
 	}
 	
@@ -31,24 +47,22 @@ public class Cart {
 		double cheapestPrice = 100000000;
 		Item cheapestItem = null;
 		for (Item i : items) {
-			if (cheapestPrice > i.product.getProductPrice()) {
+			if (cheapestPrice > i.getProduct().getProductPrice()) {
 				cheapestItem = i;
 			}
 		}
 		return cheapestItem;
-		
 	}
 	
 	public Item getExpItem(){
 		double expPrice = 0;
 		Item expItem = null;
 		for (Item i : items) {
-			if (expPrice < i.product.getProductPrice()) {
+			if (expPrice < i.getProduct().getProductPrice()) {
 				expItem = i;
 			}
 		}
-		return expItem;
-		
+		return expItem;	
 	}
 
 	public double getTotalPrice() {
@@ -58,5 +72,5 @@ public class Cart {
 	public void setTotalPrice(double totalPrice) {
 		this.totalPrice = totalPrice;
 	}
-
+	
 }

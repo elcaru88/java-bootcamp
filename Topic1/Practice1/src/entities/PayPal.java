@@ -25,11 +25,11 @@ public class PayPal extends PaymentMethod{
 	public void setPass(String pass) {
 		this.pass = pass;
 	}
-
-
+	
+    // EN ESTE METODO PUSE QUE DESCUENTA LA TOTALIDAD DEL PRODUCTO MAS BARATO//
 	@Override
 	public double calculateDiscount(Cart cart) {
-		double discount = cart.getCheapestItem().product.getProductPrice() * cart.getCheapestItem().quantity;
+		double discount = cart.getCheapestItem().getProduct().getProductPrice() * cart.getCheapestItem().getQuantity();
 		return discount;
 	}
 

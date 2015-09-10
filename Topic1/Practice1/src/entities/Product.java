@@ -1,6 +1,6 @@
 package entities;
 
-public class Product {
+public class Product   {
 	
 	private int id;
 	private String prouctName;
@@ -10,8 +10,6 @@ public class Product {
 		this.id = id;
 		this.productPrice = price;
 		this.prouctName = name;
-		
-	
 	}
 
 	public int getId() {
@@ -38,6 +36,9 @@ public class Product {
 		this.productPrice = productPrice;
 	}
 	
+	public String toString(){
+		return " ID:  "+ this.id+"  Name:  "+this.prouctName+ " Unit Price:  $"+this.productPrice;
+		
+	}
 	
-
 }

@@ -19,6 +19,8 @@ public class CtrSale {
 		
 		try {
 			
+			
+			
 			Cart actualCart = new Cart();
 			PaymentMethod actualPaymentMethod = null;
 			
@@ -26,27 +28,48 @@ public class CtrSale {
 			SalesCatalog salesCatalog = new SalesCatalog();
 			ProductCatalog catalogo = new ProductCatalog();
 			
-			System.out.println("WELCOME TO THE SHOP");
+			System.out.println("WELCOME TO THE SHOP  \n");
 			
+			
+			@SuppressWarnings("resource")
 			Scanner scan = new Scanner(System.in);
 			int productId;
 			int quantity;
-
+			
+			// HOW TO SHOW PRODUCTS//
+			
+			int show ;
+			{
+				System.out.println(" Show List by Price press // 1  //  or by Product Code press // 2 //? \n");
+				show = Integer.parseInt(scan.next());
+				if (show == 1) {
+					catalogo.sortProductsByPrice();
+					System.out.println( " LIST OF PRODUCTS BY PRICE \n");
+				}else if (show == 2) {
+					System.out.println( " LIST OF PRODUCTS BY CODE \n");
+				}else
+				{
+					System.out.println("Check your choice \n");
+				}
+				
+			} while ( show != 2 && show != 1 ); 
+			
 			//SELECCION DE PRODUCTOS //
 			String keepShopping;
 			do
 	        {
 			  catalogo.ListProducts();
 				
-	          System.out.print ("Enter the Product's NUMBER: ");
+	          System.out.print ("Enter the Product's NUMBER: \n");
 	          do {
 	        	  productId = Integer.parseInt(scan.next());
-			} while (productId > catalogo.getLastId());
+			} while (productId > ProductCatalog.getLastId());
 
-	          System.out.print ("Enter the QUANTITY: ");
+	          System.out.print ("Enter the QUANTITY: \n");
 	          quantity = Integer.parseInt(scan.next());
 
 	          Item item = new Item( catalogo.getProduct(productId), quantity);
+	          
 	          actualCart.addToCart(item);
 	          
 	          System.out.println(actualCart);
@@ -55,34 +78,7 @@ public class CtrSale {
 	          keepShopping = scan.next();
 	         }
 	         while (keepShopping.equals("y"));
-			
-			// METODO DE PAGO// 
-//			PaymentMethodFactory paymentMethodFactory = new PaymentMethodFactory();
-		     
-			// APLICAR PATRON FACTORY
-//			do 
-//		     {
-//		    	 System.out.println("CHOOSE A PAYMENT METHOD");
-//			     System.out.println("1 CASH , 2 CREDIT CARD , 3 PAYPAL");
-//			     op = Integer.parseInt(scan.next());     
-//			} while ((op != 1) || (op !=2) || (op!=3));
-//		    
-//		     if (op == 1) {
-//		    	 paymentMethod = paymentMethodFactory.getPaymentMethod(Methods.CASH);
-//		     }   
-//		     if (op == 2) {
-//		    	 paymentMethod = paymentMethodFactory.getPaymentMethod(Methods.CREDIT);
-//			     System.out.println(" Pleas write your's CREDIT CARD NUMBER :");
-//			     int creditCardNumber = Integer.parseInt(scan.next());
-//			     System.out.println(" Pleas write your's Name:");
-//			     String name = scan.next();
-//			     //
-//			 }	     
-//			 if (op == 3) {  
-//				 paymentMethod = paymentMethodFactory.getPaymentMethod(Methods.PAYPAL);
-//				 
-//			 }
-			
+					
 			int op = 0;
 			
 			while (op != 1 && op != 2 && op!=3 ) 
@@ -119,7 +115,7 @@ public class CtrSale {
 			     
 			} 
 			
-			Sale sale = new Sale( actualCart , actualPaymentMethod , salesCatalog.getSaleNumber() );
+			Sale sale = new Sale( actualCart , actualPaymentMethod , SalesCatalog.getSaleNumber() );
 			salesCatalog.IncrementSaleNumber();
 			salesCatalog.addSale(sale);
 			System.out.println(sale);

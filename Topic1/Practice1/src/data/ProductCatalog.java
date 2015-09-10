@@ -1,8 +1,10 @@
 package data;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 import entities.Product;
+import entities.ProductComparator;
 
 public class ProductCatalog {
 	
@@ -24,6 +26,9 @@ public class ProductCatalog {
 		IncrementLastID();
 		productos.add( new Product(lastId, "Parlantes" , 400));
 		IncrementLastID();
+		
+
+		
 		
 	}
 	
@@ -48,8 +53,15 @@ public class ProductCatalog {
 	
 	public void ListProducts(){
 		for (Product p : productos) {	
-			System.out.println("Id: "+p.getId()+" Product: "+ p.getProuctName()+" Price :"+ p.getProductPrice());	
+			System.out.println("Id: "+p.getId()+" Product: "+ p.getProuctName()+" Price :"+ p.getProductPrice() +"\n");	
 		}
 	}
+	
+	public void sortProductsByPrice(){
+		
+		Collections.sort( productos ,new ProductComparator());
+		
+	}
+	
 
 }
