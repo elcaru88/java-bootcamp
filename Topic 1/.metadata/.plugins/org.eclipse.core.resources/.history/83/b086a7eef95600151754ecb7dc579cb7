@@ -1,0 +1,29 @@
+package exercise1;
+
+import java.util.Scanner;
+
+public class ShoppingCartApp {
+	public static void main(String[] args) {
+	Scanner scanner = new Scanner(System.in);
+	
+	Product cd = new Product("Music cd", 20.5);
+	Product lamp = new Product("lamp",50);
+	Product pc = new Product("personal computer", 2500.00);
+	
+	
+	
+	System.out.println("Welcome");
+	ShoppingCart shoppingCart = new ShoppingCart();
+	
+	System.out.println("Choose one of the following products or imput done");
+	System.out.println("cd, lamp,pc /n");	
+		
+		
+		
+		
+		
+		
+		
+	}
+	
+}

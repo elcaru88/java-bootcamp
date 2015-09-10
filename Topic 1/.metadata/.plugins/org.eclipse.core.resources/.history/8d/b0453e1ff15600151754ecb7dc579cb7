@@ -1,0 +1,11 @@
+package exercise1;
+
+public class CreditCard extends Discount{
+
+	
+	public double priceWithDiscount(double price) {
+s
+		return 0;
+	}
+
+}

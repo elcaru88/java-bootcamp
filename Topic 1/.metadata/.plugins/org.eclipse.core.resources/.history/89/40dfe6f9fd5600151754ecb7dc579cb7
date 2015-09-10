@@ -1,0 +1,25 @@
+package exercise1;
+
+public class Test {
+	public static void main(String[] args) {
+
+		/*CreditCard c = new CreditCard();
+		
+		//System.out.println(c.priceWithDiscount(10));
+		
+		DiscountFactory discFact = new DiscountFactory();
+		
+		Discount cc = discFact.getDiscount("credit card");
+		System.out.println("precio con descuento "+cc.priceWithDiscount(100));
+		*/
+		Product cd = new Product("Music cd", 20.5);
+		Product lamp = new Product("lamp",50);
+		Product pc = new Product("personal computer", 2500.00);
+		
+		String input = "cd";
+		System.out.println(cd.getName());
+	//	System.out.println(cd.toString().equalsIgnoreCase(input));
+		
+		
+	}
+}

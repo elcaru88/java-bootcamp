@@ -1,0 +1,13 @@
+package exercise1;
+
+public class Test {
+	public static void main(String[] args) {
+
+		CreditCard c = new CreditCard();
+		
+		System.out.println(c.priceWithDiscount(100));
+		
+		
+		
+	}
+}

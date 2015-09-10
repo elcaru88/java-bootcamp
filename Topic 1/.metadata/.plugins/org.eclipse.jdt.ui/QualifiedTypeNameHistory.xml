@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="exercise1.Paypal"/>
+<fullyQualifiedTypeName name="exercise1.Cash"/>
+<fullyQualifiedTypeName name="exercise1.CreditCard"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="exercise1.ShoppingCart"/>
+<fullyQualifiedTypeName name="exercise1.Product"/>
+<fullyQualifiedTypeName name="exercise1.DiscountFactory"/>
+<fullyQualifiedTypeName name="exercise1.Discount"/>
+</qualifiedTypeNameHistroy>
