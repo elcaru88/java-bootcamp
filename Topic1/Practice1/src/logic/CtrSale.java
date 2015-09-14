@@ -19,8 +19,7 @@ public class CtrSale {
 		
 		try {
 			
-			
-			
+
 			Cart actualCart = new Cart();
 			PaymentMethod actualPaymentMethod = null;
 			
@@ -29,7 +28,6 @@ public class CtrSale {
 			ProductCatalog catalogo = new ProductCatalog();
 			
 			System.out.println("WELCOME TO THE SHOP  \n");
-			
 			
 			@SuppressWarnings("resource")
 			Scanner scan = new Scanner(System.in);
