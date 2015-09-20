@@ -3,12 +3,49 @@ package exercise4;
 public class RomanConverter {
 	// Create a Roman Number conversion (both ways, either int to Roman or
 	// Roman to int).
+	
+	public int convert(String roman) {
+		int arabic = 0;
+		for (int j = 0; j < roman.length(); j++) {
 
-	public int convert(String string) {
+			switch (roman.charAt(j)) {
 
-		return 0;
+			case 'M':
+				 arabic = arabic + 1000;
+				 break;
+			case 'D':
+				 arabic = arabic + 500;
+				 break;
+			case 'C':
+				if (j+1 < roman.length() && (roman.charAt(j+1) == 'D' || roman.charAt(j+1) == 'M'))
+					 arabic = arabic - 100;
+				else
+				 arabic = arabic + 100;
+				break;
+			case 'L':
+				 arabic = arabic + 50;
+				 break;
+			case 'X':
+				if (j+1 < roman.length() && (roman.charAt(j+1) == 'L' || roman.charAt(j+1) == 'C'))
+					 arabic = arabic - 10;
+				else
+				 arabic  = arabic+ 10;
+				break;
+			case 'V':
+				 arabic = arabic + 5;
+				 break;
+			case 'I':
+				if (j+1 < roman.length() && (roman.charAt(j+1) == 'V' || roman.charAt(j+1) == 'X'))
+					 arabic = arabic - 1;
+				else
+				 arabic = arabic + 1;
+				break;
+			}
+		}
+		return arabic;
 	}
 
+	
 	public String convert(int i) {
 		String stringNumber = Integer.toString(i);
 
@@ -20,26 +57,18 @@ public class RomanConverter {
 		case 2:
 			// 10 - 99
 			return tenToString(Integer.parseInt(stringNumber.charAt(0) + "0"))
-					+ decimalToText(Integer.parseInt(stringNumber.charAt(1)
-							+ ""));
+					+ decimalToText(Integer.parseInt(stringNumber.charAt(1) + ""));
 		case 3:
 			// 100 - 999
-			return hundredToString(Integer.parseInt(stringNumber.charAt(0)
-					+ "00"))
-					+ tenToString(Integer
-							.parseInt(stringNumber.charAt(1) + "0"))
-					+ decimalToText(Integer.parseInt(stringNumber.charAt(2)
-							+ ""));
+			return hundredToString(Integer.parseInt(stringNumber.charAt(0) + "00"))
+					+ tenToString(Integer.parseInt(stringNumber.charAt(1) + "0"))
+					+ decimalToText(Integer.parseInt(stringNumber.charAt(2) + ""));
 		case 4:
 			// 1000 - 3999
-			return thousandthToString(Integer.parseInt(stringNumber.charAt(0)
-					+ "000"))
-					+ hundredToString(Integer.parseInt(stringNumber.charAt(1)
-							+ "00"))
-					+ tenToString(Integer
-							.parseInt(stringNumber.charAt(2) + "0"))
-					+ decimalToText(Integer.parseInt(stringNumber.charAt(3)
-							+ ""));
+			return thousandthToString(Integer.parseInt(stringNumber.charAt(0) + "000"))
+					+ hundredToString(Integer.parseInt(stringNumber.charAt(1) + "00"))
+					+ tenToString(Integer.parseInt(stringNumber.charAt(2) + "0"))
+					+ decimalToText(Integer.parseInt(stringNumber.charAt(3) + ""));
 		default:
 			break;
 		}

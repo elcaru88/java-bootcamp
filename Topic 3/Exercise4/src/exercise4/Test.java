@@ -8,7 +8,9 @@ public class Test {
 		
 		RomanConverter rc = new RomanConverter();
 		
-		System.out.println(rc.convert(3170));
+		System.out.println(rc.convert("XI"));
+		
+		
 	
 	
 	}
