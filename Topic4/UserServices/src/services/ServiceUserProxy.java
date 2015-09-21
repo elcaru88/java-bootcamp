@@ -27,8 +27,13 @@ public class ServiceUserProxy implements ServiceUser {
 	}
 
 	@Override
-	public void delete(User user) {
-		implementation.delete(user);
+	public void delete(int id) {
+		implementation.delete(id);
+	}
+
+	@Override
+	public void listUsers() {
+		implementation.listUsers();
 	}
 
 }

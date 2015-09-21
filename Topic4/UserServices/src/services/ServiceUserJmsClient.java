@@ -25,7 +25,13 @@ public class ServiceUserJmsClient implements ServiceUser{
 	}
 
 	@Override
-	public void delete(User user) {
+	public void delete(int id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void listUsers() {
 		// TODO Auto-generated method stub
 		
 	}

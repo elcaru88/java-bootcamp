@@ -15,5 +15,10 @@ public class ServiceUserFactory {
 	 public static ServiceUser getRemoteServiceUsingWebService(){  
 	        return new ServiceUserProxy (new ServiceUserWebServiceClient());  
 	    } 
+	 
+	 public static ServiceUser getRemoteServiceUserMemory(){
+		    return new ServiceUserProxy (new ServiceUserMemory());
+	    }
+	      
 
 }

@@ -9,6 +9,8 @@ public interface ServiceUser {
 	public void create(User user);	
 	public User getById(int id);	
 	public void update(User user);	
-	public void delete(User user);
+	public void delete(int id);
+	
+	public void listUsers();
 	
 }
