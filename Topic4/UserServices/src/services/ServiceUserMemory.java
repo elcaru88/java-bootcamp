@@ -30,7 +30,10 @@ public class ServiceUserMemory implements ServiceUser{
 
 	@Override
 	public void listUsers() {
-		userData.listarUsuarios();
+		userData.listUsers();
+		
 	}
+
+	
 
 }

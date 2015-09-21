@@ -17,8 +17,7 @@ public class ServiceUserProxy implements ServiceUser {
 
 	@Override
 	public User getById(int id) {
-		implementation.getById(id);
-		return null;
+		return implementation.getById(id);
 	}
 
 	@Override
