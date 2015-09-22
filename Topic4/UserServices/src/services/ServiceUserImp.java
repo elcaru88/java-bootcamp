@@ -32,5 +32,13 @@ public class ServiceUserImp implements ServiceUser {
 	@Override
 	public void listUsers() {
 		// TODO Auto-generated method stub
-	};  
+	}
+
+	@Override
+	public void addFriend(User user, User friend) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	
 }  

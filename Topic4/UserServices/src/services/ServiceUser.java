@@ -11,6 +11,7 @@ public interface ServiceUser {
 	public void update(User user);	
 	public void delete(int id);
 	
+	public void addFriend(User user, User friend);
 	public void listUsers();
 	
 }

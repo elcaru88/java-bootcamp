@@ -34,6 +34,13 @@ public class ServiceUserMemory implements ServiceUser{
 		
 	}
 
+	@Override
+	public void addFriend(User user ,User friend) {
+		userData.addFriend(user, friend);
+		
+	}
+
+	
 	
 
 }

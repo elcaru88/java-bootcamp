@@ -10,8 +10,6 @@ import entities.User;
 public class UserData {
 	
 	
-	//private ArrayList<User> users =  new ArrayList<User>() ;
-	
 	private HashMap< Integer , User> users =new HashMap< Integer, User>();
 	
 	public void addUser(User u){
@@ -34,7 +32,12 @@ public class UserData {
 	public void listUsers(){
 		for (User value : users.values()) {
 		     System.out.println(value.toString());
+		     value.listFriends();
 		}
+	}
+	
+	public void addFriend( User user , User friend) {
+		users.get( user.getId() ).addFriend(friend);
 	}
 
 }

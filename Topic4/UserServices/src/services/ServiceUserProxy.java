@@ -1,5 +1,6 @@
 package services;
 
+
 import entities.User;
 
 public class ServiceUserProxy implements ServiceUser {
@@ -35,4 +36,11 @@ public class ServiceUserProxy implements ServiceUser {
 		implementation.listUsers();
 	}
 
+
+	@Override
+	public void addFriend(User user, User friend) {
+		// TODO Auto-generated method stub
+	}
+
+	
 }

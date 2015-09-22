@@ -33,4 +33,12 @@ public class ServiceUserWebServiceClient implements ServiceUser {
 		
 	}
 
+	@Override
+	public void addFriend(User user ,User friend) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	
+
 }
