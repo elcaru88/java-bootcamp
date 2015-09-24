@@ -1,0 +1,26 @@
+DROP TABLE  students;
+
+CREATE TABLE `students` (
+  `firstName` varchar(20) NOT NULL,
+  `lastName` varchar(20) default NULL,
+  `registrationNumber` int(11) NOT NULL,
+  `birth` date NOT NULL,
+  PRIMARY KEY  (`registrationNumber`),
+  UNIQUE KEY `registrationNumber` (`registrationNumber`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+INSERT INTO students ( firstName, lastName , registrationNumber, birth )
+VALUES
+("Tomas" , "Fontanarrosa" , 1 , DATE('1993-08-18')),
+("Juan", "Gomez" , 2 , DATE('1993-11-11')),
+("Maria" , "Gutierrez" , 3, DATE('1994-01-04')),
+("Pedro", "Gomez" , 4 , DATE('1993-11-11')),
+("Victoria" , "Aasre" , 5, DATE('1994-01-04')),
+("Mariana", "Holler" , 6 , DATE('1993-11-11')),
+("Ruben" , "Lenten" , 7, DATE('1994-01-04')),
+("Roby", "Naish" , 8 , DATE('1993-11-11')),
+("Pete" , "Cabrinha" , 9, DATE('1994-01-04')),
+("Jesse", "Richmand" , 10 , DATE('1993-11-11')),
+("Susi" , "Kite" , 11 ,DATE('1994-01-04'));
+
+
