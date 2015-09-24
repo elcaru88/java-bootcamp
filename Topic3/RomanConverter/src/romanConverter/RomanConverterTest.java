@@ -13,7 +13,6 @@ public class RomanConverterTest {
 		
 		Roman roman = new Roman((new MyNumber(3).intToRomanNumerals()));
 		assertEquals(  roman.getRomanDigit() , "III");
-		
 	}
 	
 	@Test
@@ -73,5 +72,4 @@ public class RomanConverterTest {
 		MyNumber myNumber = new MyNumber(new Roman("MCI").romanToDecimal());
 		assertEquals( myNumber.getNumber() , 1101);
 	}
-	
 }
