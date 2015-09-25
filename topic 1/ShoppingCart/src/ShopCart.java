@@ -35,6 +35,10 @@ public class ShopCart {
 		return itemsBuyer;
 	}
 	
+	public Item getItem() {
+		return itemsBuyer.get(0);
+	}
+	
 	public double creditCardOperation(String userName, Integer creditNumber) {
 		double totalDiscount=0;
 		boolean ok;
@@ -121,5 +125,6 @@ public class ShopCart {
 		//int id= (int) (Math.random()*10000);
 		return id++;
 	}
+	
 
 }
