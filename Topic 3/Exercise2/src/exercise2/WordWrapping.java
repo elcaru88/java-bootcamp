@@ -8,7 +8,7 @@ public class WordWrapping {
 
 	private List<String> list;
 
- public String borrar (String first, String second){
+ public String delete (String first, String second){
 	if (second.contains(first.subSequence(0, first.length())))
 			{
 				second = second.substring(first.length());
@@ -25,7 +25,7 @@ public class WordWrapping {
 		if (input.length() > length){
 		first = input.substring(0, length);
 			
-		algorithm(borrar(first,input), length);
+		algorithm(delete(first,input), length);
 		
 		list.add(first);
 

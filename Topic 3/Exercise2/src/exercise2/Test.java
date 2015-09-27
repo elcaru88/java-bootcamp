@@ -11,7 +11,7 @@ public class Test {
 		//System.out.println(Arrays.toString(hola.split(hola)));
 		//System.out.println("hola como estas".substring(0, 2));
 		
-		System.out.println(ww.algorithm("hello word", 6));
+		System.out.println(ww.algorithm("excelente", 5));
 		
 	}
 
