@@ -41,7 +41,10 @@ public class AccionStudentCourse {
 		StudentCourseList studentCourseList = new StudentCourseList();
 		StudentCourse studentCourse;
 		Statement st = con.createStatement();
-		ResultSet rs = st
+	ResultSet rs ;
+		
+		if(courseName.equals("Geography") || courseName.equals("Mathematics") ){
+		 rs = st
 				.executeQuery("select courseName, teacherFirstName ,teacherLastName ,lastName, firstName "
 						+ " from studentCourse,course,student "
 						+ " where courseName='"
@@ -50,7 +53,19 @@ public class AccionStudentCourse {
 						+ " and course.name = studentCourse.courseName "
 						+ " and student.registrationNumber = studentCourse.registrationNumber "
 						+ " and course.sheduleTime = 'Thursday 15:00 - 17:00' "						
-						+ " ORDER BY lastName ");
+						+ " ORDER BY lastName ");}
+		else{
+			 rs = st
+					.executeQuery("select courseName, teacherFirstName ,teacherLastName ,lastName, firstName "
+							+ " from studentCourse,course,student "
+							+ " where courseName='"
+							+ courseName
+							+ "'"
+							+ " and course.name = studentCourse.courseName "
+							+ " and student.registrationNumber = studentCourse.registrationNumber "
+							+ " ORDER BY lastName ");
+			
+		}
 		while (rs.next()) {
 
 			studentCourse = new StudentCourse(rs.getString("courseName"), rs.getString("teacherFirstName"),
