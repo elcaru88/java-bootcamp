@@ -15,6 +15,7 @@ public interface UserService  {
 	
 	public void createFriend(User user, User friend);
 	public void listFriends();
+	public void addLike(User user);
 	
 
 

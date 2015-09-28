@@ -15,7 +15,7 @@ public class UserAccion {
 	
 	public UserAccion() {
 		users = new ArrayList<>();
-		fix=1;
+		fix=0;
 		friends = new HashMap<>();
 	}
 	
@@ -42,6 +42,10 @@ public class UserAccion {
 		while(it.hasNext())
 		  System.out.println(it.next());
 		//System.out.println(users);
+	}
+	
+	public void addLike(User usr) {
+		usr.getPhoto().setPhotoLikes(1);
 	}
 
 	

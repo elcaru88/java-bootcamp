@@ -48,4 +48,10 @@ public class UserServicesImp implements UserService{
 		
 	}
 
+	@Override
+	public void addLike(User user) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

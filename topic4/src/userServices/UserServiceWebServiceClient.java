@@ -51,6 +51,12 @@ public class UserServiceWebServiceClient implements UserService {
 		// TODO Auto-generated method stub
 		
 	}
+
+	@Override
+	public void addLike(User user) {
+		// TODO Auto-generated method stub
+		
+	}
 	
 
 }

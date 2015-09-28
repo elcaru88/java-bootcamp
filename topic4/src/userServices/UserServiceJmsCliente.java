@@ -49,6 +49,12 @@ public class UserServiceJmsCliente implements UserService {
 		// TODO Auto-generated method stub
 		
 	}
+
+	@Override
+	public void addLike(User usr) {
+		// TODO Auto-generated method stub
+		
+	}
 	
 
 }

@@ -51,4 +51,11 @@ public class UserServiceProxy implements UserService{
 		implementation.listFriends();
 	}
 
+	@Override
+	public void addLike(User user) {
+		// TODO Auto-generated method stub
+		implementation.addLike(user);
+		
+	}
+
 }

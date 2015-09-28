@@ -4,7 +4,7 @@ public class Photo {
 	private String photoUser;
 	private Integer photoLikes;
 	
-	public Photo(String photoUser, Integer phothoLikes) {
+	public Photo(String photoUser, Integer photoLikes) {
 		this.photoUser = photoUser;
 		this.photoLikes = photoLikes;
 	}
@@ -22,7 +22,7 @@ public class Photo {
 	}
 
 	public void setPhotoLikes(Integer photoLikes) {
-		this.photoLikes = photoLikes;
+		this.photoLikes++;
 	}
 
 	@Override

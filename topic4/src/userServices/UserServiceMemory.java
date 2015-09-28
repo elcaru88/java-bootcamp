@@ -48,4 +48,10 @@ public class UserServiceMemory implements UserService{
 		usrAc.getFriends();
 	}
 
+	@Override
+	public void addLike(User usr) {
+		// TODO Auto-generated method stub
+		usrAc.addLike(usr);
+	}
+
 }

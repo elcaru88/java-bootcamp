@@ -34,7 +34,10 @@ public class DemoUserService {
 		    userService.createFriend(userService.read(idTest), userService.read(idTest+1));
 		    userService.createFriend(userService.read(idTest+2), userService.read(idTest+3));
 		    //likes photos
-		    userService.read(idTest+1).getPhoto().setPhotoLikes(1);
+		    //userService.read(idTest+1).getPhoto().setPhotoLikes(1);
+		    userService.addLike(userService.read(1));
+		    userService.addLike(userService.read(3));
+		    userService.addLike(userService.read(3));
 		    //read friends
 		    System.out.println("LIST FRIENDS");
 		    userService.listFriends();
