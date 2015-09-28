@@ -14,13 +14,10 @@ public class Wrapping {
 	    	ret.add(text);
 		}
 	    else {
-	    	
 	    	int times = text.length() / size;
 	    	int begin = 0;
 	    	int end = size;
-	    	
 	    	for (int i = 0; i < times+1 ; i++) {
-	    		
 	    		if (i == times) {
 	    			String t = text.substring(begin , text.length());
 		    		ret.add(t);
