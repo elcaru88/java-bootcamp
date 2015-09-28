@@ -1,3 +1,4 @@
+package number;
 import java.util.Scanner;
 
 public class NumberToWords {
