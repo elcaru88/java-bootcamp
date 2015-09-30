@@ -45,29 +45,28 @@ public class MeetingRestController {
 		return list;
 	}
 
-	//trate de hacerlo asi method = RequestMethod.DELETE
-	//pero tira error
-	@RequestMapping(value = "delete/{meetingId}", method = RequestMethod.GET)
+	
+	@RequestMapping(value = "delete/{meetingId}", method = RequestMethod.DELETE)
 	void deleteMeeting(@PathVariable long meetingId) {
 
 		meetingRepository.delete(meetingId);
-		listMeeting();
+	
 	}
 	
 	
 
-	@RequestMapping(value = "/create", method = RequestMethod.GET)
-	List<String> createMeeting(@RequestParam(value="timeSlot", required = true) String timeSlot,
+	@RequestMapping(value = "/create", method = RequestMethod.POST)
+	void createMeeting(@RequestParam(value="timeSlot", required = true) String timeSlot,
 			@RequestParam(value="room" , required = true) String room,
 			@RequestParam(value="attendee" , required = true) String attendee) {
 		
 		
 		meetingRepository.save(new Meeting(timeSlot, roomRepository.findByRoomNumber(room), attendeeRepository.findByLastName(attendee)));
-		return listMeeting();
+		
 
 	}
 	
-	//no anda
+	
 	@RequestMapping(value = "/update/{meetingId}", 
 			method = RequestMethod.PUT)
 	@ResponseStatus(HttpStatus.NO_CONTENT)
@@ -76,22 +75,5 @@ public class MeetingRestController {
 		HttpServletRequest request, HttpServletResponse response) {
 		meetingRepository.save(meeting);
 	}
-	
-/*
- *   @RequestMapping(value = "/{id}",
-            method = RequestMethod.PUT,
-            consumes = {"application/json", "application/xml"},
-            produces = {"application/json", "application/xml"})
-    @ResponseStatus(HttpStatus.NO_CONTENT)
-    @ApiOperation(value = "Update a hotel resource.", notes = "You have to provide a valid hotel ID in the URL and in the payload. The ID attribute can not be updated.")
-    public void updateHotel(@ApiParam(value = "The ID of the existing hotel resource.", required = true)
-                                 @PathVariable("id") Long id, @RequestBody Hotel hotel,
-                                 HttpServletRequest request, HttpServletResponse response) {
-//        checkResourceFound(this.hotelService.getHotel(id));
-  //      if (id != hotel.getId()) throw new DataFormatException("ID doesn't match!");
-        this.hotelService.updateHotel(hotel);
-    }
- */
-	
 
 }
