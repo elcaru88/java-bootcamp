@@ -125,6 +125,7 @@ public class DataCourse {
 		}
 	}
 	
+	// AGREGAR ESTUDIANTE
 	public void addStudent( String name , int registrationNumber ){
 		ResultSet rs=null;
 		PreparedStatement stmt=null;

@@ -46,10 +46,6 @@ public class DataStudent {
 		ResultSet rs=null;
 		PreparedStatement stmt=null;
 		Student s=null;
-		Course c = null;
-		ResultSet rs2=null;
-		PreparedStatement stmt2=null;
-		
 		
 		try {
 			stmt = 	FactoryConexion.getInstancia().getConn().prepareStatement(
@@ -64,29 +60,6 @@ public class DataStudent {
 				s.setLastName(rs.getString("lastName"));
 				s.setBirth(rs.getDate("birth"));
 			}
-			
-//			// BUSCAR CURSOS DEL ALUMNO
-//			
-//			stmt2 = FactoryConexion.getInstancia().getConn().prepareStatement(
-//					"select name , firtsPartial , secondPartial , thirthPartial , finalNote from student-course "
-//					+ "where registrationNumber = ?");
-//				
-//			stmt2.setInt(1, registrationNumber);
-//			rs2 = stmt.executeQuery();
-//			
-//			
-//			if (rs2 !=null ) {
-//			
-//				while(rs2.next()) {
-//					
-//					c = new Course();
-//					DataCourse dc = new DataCourse();
-//					c = dc.getByName(rs2.getString("name"));
-//					s.agregarCourse(c);
-//					}				
-//			}
-				
-
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -102,10 +75,8 @@ public class DataStudent {
 			}
 			FactoryConexion.getInstancia().releaseConn();
 		}
-		
 		return s;
 	}
-	
 	
 
 }
