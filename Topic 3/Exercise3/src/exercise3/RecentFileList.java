@@ -27,7 +27,7 @@ public class RecentFileList {
 	public void openFile(String file) {
 		// TODO Auto-generated method stub
 		f = new File(file);
-
+		String line;
 		if (f.exists()) {
 
 			putFile(f);
@@ -35,9 +35,9 @@ public class RecentFileList {
 			BufferedReader buff = null;
 			try {
 				buff = new BufferedReader(new FileReader(f));
-
-				while (buff.readLine() != null) {
-					System.out.println(buff.readLine());
+				
+				while ((line = buff.readLine()) != null) {
+					System.out.println(line);
 				}
 			} catch (IOException e) {
 				System.err.println(e);

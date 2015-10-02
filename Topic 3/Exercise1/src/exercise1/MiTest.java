@@ -5,8 +5,8 @@ public class MiTest {
 		
 		
 		Converter con = new Converter();
-	//	con.setNumber(120.00);
-//		con.getText();
+		con.setNumber(120.00);
+		con.getText();
 		//System.out.println(con.decimalToText(0));
 	/*	String hola ="hola";
 		System.out.println(hola.length());
