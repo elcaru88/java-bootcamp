@@ -47,7 +47,6 @@ public class Demo {
 		dt.add( new Teacher( 3 , "Pedro" , "Master" ,  Date.valueOf("1963-04-12")));
 		
 		DataCourse dc = new DataCourse();
-		
 		dc.add( new Course( "JAVA" , dt.getById(1) , 5 ));
 		dc.add( new Course( "C++" , dt.getById(2) , 4 ));
 		dc.add( new Course( "PHP" , dt.getById(2) , 1 ));

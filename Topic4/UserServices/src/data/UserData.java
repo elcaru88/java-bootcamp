@@ -10,7 +10,8 @@ import entities.User;
 public class UserData {
 	
 	
-	private HashMap< Integer , User> users =new HashMap< Integer, User>();
+	
+	private HashMap< Integer,User> users = new HashMap<Integer, User>();
 	
 	public void addUser(User u){
 		users.put(u.getId(), u);	 
