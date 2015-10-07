@@ -20,8 +20,8 @@ public class AccountService {
 	public Account createAccount(Account account) {
 		return accountRepository.save(account);
 	}
-	
-	public Optional<Account> findByUserName(String userName){
+
+	public Account findByUserName(String userName) {
 		return accountRepository.findByUserName(userName);
 	}
 
@@ -32,5 +32,24 @@ public class AccountService {
 	public void deleteAccount(Long id) {
 		accountRepository.delete(id);
 	}
-	
+
+	public boolean existUserName(String userName) {
+		boolean exist = false;
+		Account account = accountRepository.findByUserName(userName);
+		if (account.equals(userName)) {
+			exist = true;
+		}
+		return exist;
+	}
+
+	public boolean correctPass(String user, String pass) {
+		boolean correct = false;
+		Account account = accountRepository.findByUserName(user);
+
+		if (account.equals(user, pass)) {
+			correct = true;
+		}
+		return correct;
+	}
+
 }
