@@ -22,7 +22,8 @@ public class ShoppingCartController {
 	private AccountService accountService;
 
 	private void validateUser(String userId) {
-		accountService.findByUserName(userId);
+		if (!accountService.findByUserName(userId))
+			throw new UserNotFoundWrongPassException(account.userName);
 	}
 
 	@RequestMapping(method = RequestMethod.POST)
