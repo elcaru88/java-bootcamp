@@ -88,13 +88,4 @@ public class Account {
 	}
 	
 	
-	public boolean equals(String user, String pass){
-		boolean correct = false;
-		if(equals(user) && password.equals(pass)){
-			correct=true;
-		}
-		return correct;
-	}
-	
-
 }

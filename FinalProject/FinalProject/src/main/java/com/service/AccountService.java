@@ -42,14 +42,5 @@ public class AccountService {
 		return exist;
 	}
 
-	public boolean correctPass(String user, String pass) {
-		boolean correct = false;
-		Account account = accountRepository.findByUserName(user);
-
-		if (account.equals(user, pass)) {
-			correct = true;
-		}
-		return correct;
-	}
-
+		
 }
