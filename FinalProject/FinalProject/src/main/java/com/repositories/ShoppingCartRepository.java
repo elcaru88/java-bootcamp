@@ -9,5 +9,6 @@ import com.model.ShoppingCart;
 public interface ShoppingCartRepository extends JpaRepository<ShoppingCart, Long>{
 	
 	 Collection<ShoppingCart> findByAccountUserName(String userName);
-
+	 
+	 ShoppingCart findById (long id);
 }

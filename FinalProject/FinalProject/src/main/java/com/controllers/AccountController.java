@@ -19,21 +19,23 @@ public class AccountController {
 	@Autowired
 	private AccountService accountService;
 
-	@RequestMapping(method = RequestMethod.POST)
-	public void createAccount(@RequestBody Account account ) {
-		if(!accountService.existUserName(account.userName))
+	@RequestMapping(value = "/create",method = RequestMethod.POST)
+	public String createAccount(@RequestBody Account account ) {
+		if(!accountService.existUserName(account.userName)){
 		accountService.createAccount(account);
+		return "user created";
+		}
 		else
 			throw new UserExist(account.userName);
 	}
 
-	@RequestMapping(value = "/{id}", method = RequestMethod.PUT)
+	@RequestMapping(value = "/update/{id}", method = RequestMethod.PUT)
 	public void updateAccount(@PathVariable("id") Long id,
 			@RequestBody Account account) {
 		accountService.updateAccount(account);
 	}
 
-	@RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
+	@RequestMapping(value = "/delete/{id}", method = RequestMethod.DELETE)
 	public void deleteAccount(@PathVariable("id") Long id) {
 
 		accountService.deleteAccount(id);
@@ -41,10 +43,10 @@ public class AccountController {
 	
 	
 	
-	@RequestMapping(method = RequestMethod.GET)
+	@RequestMapping(value = "/log-in",method = RequestMethod.POST)
 	public String  login(@RequestBody Account account) {
-		if(accountService.equals(account))
-			return "user granted access";
+		if(accountService.userExist(account))
+			return "user access granted";
 					
 		else
 			throw new UserNotFoundWrongPassException(account.userName);

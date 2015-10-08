@@ -2,6 +2,7 @@ package com.service;
 
 import java.util.Collection;
 
+import com.model.Product;
 import com.model.ShoppingCart;
 import com.repositories.ShoppingCartRepository;
 
@@ -22,7 +23,7 @@ public class ShoppingCartService {
 	}
 
 	public ShoppingCart getShoppingCart(long id) {
-		return shoppingCartRepository.findOne(id);
+		return shoppingCartRepository.findById(id);
 	}
 
 	public void updateShoppingCart(ShoppingCart shoppingCart) {
@@ -37,5 +38,6 @@ public class ShoppingCartService {
 		
 		return shoppingCartRepository.findByAccountUserName(userName);
 	}
-
+	
+	
 }

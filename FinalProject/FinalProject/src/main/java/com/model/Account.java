@@ -20,7 +20,7 @@ public class Account {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	private Long id;
+	private Long accountId;
 
 	@JsonIgnore
 	public String password;
@@ -81,6 +81,7 @@ public class Account {
 
 	public boolean equals(String newUserName){
 		boolean exist = false;
+		
 		if(userName.equalsIgnoreCase(newUserName)){
 			exist=true;
 		}

@@ -1,10 +1,11 @@
 package com.service;
 
+import java.util.List;
+
 import com.model.Product;
 import com.repositories.ProductRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
-
 import org.springframework.stereotype.Service;
 
 @Service
@@ -24,7 +25,7 @@ public class ProductService {
 		return productRepository.findByName(name);
 	}
 
-	public Product getProductByCategory(String category) {
+	public List<Product> getProductByCategory(String category) {
 		return productRepository.findByCategory(category);
 	}
 
