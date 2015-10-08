@@ -1,7 +1,5 @@
 package com.service;
 
-import java.util.Optional;
-
 import com.model.Account;
 import com.repositories.AccountRepository;
 
