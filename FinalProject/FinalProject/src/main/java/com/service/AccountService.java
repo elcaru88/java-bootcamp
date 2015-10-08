@@ -1,7 +1,5 @@
 package com.service;
 
-import java.util.Optional;
-
 import com.model.Account;
 import com.repositories.AccountRepository;
 
@@ -36,7 +34,16 @@ public class AccountService {
 	public boolean existUserName(String userName) {
 		boolean exist = false;
 		Account account = accountRepository.findByUserName(userName);
-		if (account.equals(userName)) {
+		if (account!= null && account.equals(userName)) {
+			exist = true;
+		}
+		return exist;
+	}
+	
+	public boolean userExist(Account account) {
+		boolean exist = false;
+		Account findAccount = accountRepository.findByUserName(account.getUserName());
+		if (findAccount!= null && account.equals(findAccount)) {
 			exist = true;
 		}
 		return exist;

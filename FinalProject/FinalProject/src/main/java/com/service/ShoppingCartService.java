@@ -2,6 +2,7 @@ package com.service;
 
 import java.util.Collection;
 
+import com.model.Product;
 import com.model.ShoppingCart;
 import com.repositories.ShoppingCartRepository;
 
@@ -21,8 +22,10 @@ public class ShoppingCartService {
 		return shoppingCartRepository.save(shoppingCart);
 	}
 
-	public ShoppingCart getShoppingCart(long id) {
-		return shoppingCartRepository.findOne(id);
+	public ShoppingCart getShoppingCart(String userName , long id) {
+		System.out.println(shoppingCartRepository.findByAccountUserNameAndId(userName, id));
+		return shoppingCartRepository.findByAccountUserNameAndId(userName, id);
+		
 	}
 
 	public void updateShoppingCart(ShoppingCart shoppingCart) {
@@ -37,5 +40,20 @@ public class ShoppingCartService {
 		
 		return shoppingCartRepository.findByAccountUserName(userName);
 	}
-
+	
+	public void addProduct(String userId,long id,Product product) {
+	
+		ShoppingCart shoppingCart = shoppingCartRepository.findByAccountUserNameAndId(userId, id);
+		System.out.println(shoppingCart);
+		
+		shoppingCart.products.add(product);
+		
+		System.out.println(shoppingCart);
+		
+		shoppingCartRepository.save(shoppingCart);
+		
+		System.out.println(shoppingCart);
+	}
+	
+	
 }

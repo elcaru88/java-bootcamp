@@ -1,5 +1,7 @@
 package com.controllers;
 
+import java.util.List;
+
 import com.model.Product;
 import com.service.ProductService;
 
@@ -35,7 +37,7 @@ public class ProductController {
 	}
 
 	@RequestMapping(value = "/findByCategory/{category}", method = RequestMethod.GET)
-	public Product getProductByCategory(@PathVariable("category") String category) {
+	public List<Product> getProductByCategory(@PathVariable("category") String category) {
 		return productService.getProductByCategory(category);
 
 	}

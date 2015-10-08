@@ -1,4 +1,5 @@
 C:\Users\usuario\Desktop\Spring workspace\Final\FinalProject\src\main\java\com\Application.java
+C:\Users\usuario\Desktop\Spring workspace\Final\FinalProject\src\main\java\com\exception\UserExist.java
 C:\Users\usuario\Desktop\Spring workspace\Final\FinalProject\src\main\java\com\model\ShoppingCart.java
 C:\Users\usuario\Desktop\Spring workspace\Final\FinalProject\src\main\java\com\repositories\AccountRepository.java
 C:\Users\usuario\Desktop\Spring workspace\Final\FinalProject\src\main\java\com\service\AccountService.java
@@ -9,5 +10,6 @@ C:\Users\usuario\Desktop\Spring workspace\Final\FinalProject\src\main\java\com\r
 C:\Users\usuario\Desktop\Spring workspace\Final\FinalProject\src\main\java\com\service\ShoppingCartService.java
 C:\Users\usuario\Desktop\Spring workspace\Final\FinalProject\src\main\java\com\controllers\ProductController.java
 C:\Users\usuario\Desktop\Spring workspace\Final\FinalProject\src\main\java\com\controllers\ShoppingCartController.java
+C:\Users\usuario\Desktop\Spring workspace\Final\FinalProject\src\main\java\com\exception\UserNotFoundWrongPassException.java
 C:\Users\usuario\Desktop\Spring workspace\Final\FinalProject\src\main\java\com\model\Account.java
 C:\Users\usuario\Desktop\Spring workspace\Final\FinalProject\src\main\java\com\controllers\AccountController.java
